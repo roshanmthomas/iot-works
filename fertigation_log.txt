@@ -1,0 +1,30 @@
+[2025-10-23 13:04:06] === Fertigation Control Started ===
+[2025-10-23 13:04:06] Configuration loaded from control_signal.json
+[2025-10-23 13:04:06] Initialization delay started (10s)
+[2025-10-23 13:04:16] Initialization delay completed
+[2025-10-23 13:04:16] Starting concurrent operations: Tanks + Fertigation
+[2025-10-23 13:04:16] Tank 1 started (Duration: 200s)
+[2025-10-23 13:04:16] Fertigation started (Concurrent with tanks, Target EC: 0.5, Target pH: 0.65)
+[2025-10-23 13:04:16] Tank 2 started (Duration: 300s)
+[2025-10-23 13:04:16] pH reading: 7.6 -> Acid pH Tank Started
+[2025-10-23 13:04:16] Tank 3 started (Duration: 250s)
+[2025-10-23 13:04:46] pH reading: 6.3 -> pH Stable - Acid pH Tank Stopped (ran for 30s)
+[2025-10-23 13:05:16] pH reading: 7.7 -> Acid pH Tank Started
+[2025-10-23 13:05:46] pH reading: 6.6 -> pH Stable - Acid pH Tank Stopped (ran for 30s)
+[2025-10-23 13:06:16] pH reading: 6.7 -> pH Stable
+[2025-10-23 13:06:46] pH reading: 6.9 -> pH Stable
+[2025-10-23 13:07:16] pH reading: 6.2 -> pH Stable
+[2025-10-23 13:07:36] Tank 1 completed
+[2025-10-23 13:07:46] pH reading: 6.2 -> pH Stable
+[2025-10-23 13:08:16] pH reading: 5.6 -> Base pH Tank Started
+[2025-10-23 13:08:26] Tank 3 completed
+[2025-10-23 13:08:46] pH reading: 6.2 -> pH Stable - Base pH Tank Stopped (ran for 30s)
+[2025-10-23 13:09:16] Tank 2 completed
+[2025-10-23 13:09:16] All tanks completed
+[2025-10-23 13:09:16] pH reading: 6.7 -> pH Stable
+[2025-10-23 13:09:16] Maximum tank duration reached - Fertigation completed
+[2025-10-23 13:09:16] Flush started (Duration: 120s)
+[2025-10-23 13:11:16] Flush completed
+[2025-10-23 13:11:16] === Fertigation Process Ended ===
+[2025-10-23 13:11:16] Summary: Acid pH Tank Started = 2 time(s), Base pH Tank Started = 1 time(s), Total Duration = 300s
+[2025-10-23 13:11:16] Process completed successfully!

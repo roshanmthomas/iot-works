@@ -1,0 +1,27 @@
+[2025-10-16 11:00:00] === Fertigation Control Started ===
+[2025-10-16 11:00:00] Initialization delay started (300s)
+[2025-10-16 11:05:00] Initialization delay completed
+[2025-10-16 11:05:00] Tank 1 started (Duration: 1000s)
+[2025-10-16 11:05:00] Tank 2 started (Duration: 2000s)
+[2025-10-16 11:05:00] Tank 3 started (Duration: 1500s)
+[2025-10-16 11:05:00] Fertigation started (Concurrent with tanks, Target EC: 0.5, Target pH: 6.5)
+[2025-10-16 11:05:30] pH reading: 7.2 → Acid pH Tank Started
+[2025-10-16 11:06:00] pH reading: 6.8 → pH Stable — Acid pH Tank Stopped (ran for 30s)
+[2025-10-16 11:06:30] pH reading: 5.9 → Base pH Tank Started
+[2025-10-16 11:07:00] pH reading: 6.5 → pH Stable — Base pH Tank Stopped (ran for 30s)
+[2025-10-16 11:07:30] pH reading: 7.4 → Acid pH Tank Started
+[2025-10-16 11:08:00] pH reading: 7.1 → stable
+[2025-10-16 11:08:30] pH reading: 6.0 → pH Stable — Acid pH Tank Stopped (ran for 60s)
+[2025-10-16 11:09:00] pH reading: 5.7 → Base pH Tank Started
+[2025-10-16 11:09:30] pH reading: 6.3 → pH Stable — Base pH Tank Stopped (ran for 30s)
+[2025-10-16 11:10:00] pH reading: 7.5 → Acid pH Tank Started
+[2025-10-16 11:10:30] pH reading: 6.9 → pH Stable — Acid pH Tank Stopped (ran for 30s)
+...
+[2025-10-16 11:21:40] Tank 1 completed
+[2025-10-16 11:31:40] Tank 3 completed
+[2025-10-16 11:38:20] Tank 2 completed
+[2025-10-16 11:38:20] Maximum tank duration reached — Fertigation completed
+[2025-10-16 11:38:20] Flush started (Duration: 120s)
+[2025-10-16 11:40:20] Flush completed
+[2025-10-16 11:40:20] === Fertigation Process Ended ===
+[2025-10-16 11:40:20] Summary: Acid pH Tank Started = 3 time(s), Base pH Tank Started = 2 time(s), Total Duration = 2000s

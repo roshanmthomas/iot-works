@@ -1,0 +1,14 @@
+{
+    "initial_delay": 10,
+    "flush": 120,
+    "tanks": [
+        200,
+        300,
+        250
+    ],
+    "duty_cycle": {
+        "ec": 0.5,
+        "ph": 0.65
+    },
+    "ph_interval": 30
+}

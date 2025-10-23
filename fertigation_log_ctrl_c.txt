@@ -1,0 +1,18 @@
+[2025-10-23 13:36:44] === Fertigation Control Started ===
+[2025-10-23 13:36:44] Configuration loaded from control_signal.json
+[2025-10-23 13:36:44] Initialization delay started (10s)
+[2025-10-23 13:36:54] Initialization delay completed
+[2025-10-23 13:36:54] Starting concurrent operations: Tanks + Fertigation
+[2025-10-23 13:36:54] Tank 1 started (Duration: 200s)
+[2025-10-23 13:36:54] Fertigation started (Concurrent with tanks, Target EC: 0.5, Target pH: 0.65)
+[2025-10-23 13:36:54] Tank 2 started (Duration: 300s)
+[2025-10-23 13:36:54] pH reading: 5.2 -> Base pH Tank Started
+[2025-10-23 13:36:54] Tank 3 started (Duration: 250s)
+[2025-10-23 13:37:13] === Fertigation Process Interrupted by User ===
+[2025-10-23 13:37:13] Performing graceful shutdown...
+[2025-10-23 13:37:13] Base pH Tank force stopped (was running for 18s)
+[2025-10-23 13:37:13] Shutdown signalled; waiting for threads to exit...
+[2025-10-23 13:37:13] Tank 1 interrupted during operation
+[2025-10-23 13:37:13] Tank 2 interrupted during operation
+[2025-10-23 13:37:13] Tank 3 interrupted during operation
+[2025-10-23 13:37:13] Shutdown requested - skipping flush/summary
