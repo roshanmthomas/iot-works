@@ -51,7 +51,7 @@ The system is designed to mimic actual field controllers used in precision agric
 1. Clone or download the project files:
 ```bash
 git clone <repository-url>
-cd fertigation-control-system
+cd iot-works
 ```
 
 2. Ensure you have the required files:
@@ -67,11 +67,12 @@ The system uses a JSON configuration file ([`control_signal.json`](control_signa
 {
     "initial_delay": 5,
     "flush": 10,
-    "tanks": [100, 200, 150],
+    "tanks": [30, 45, 60],
     "duty_cycle": {
-        "ec": 0.8,
-        "ph": 0.7
-    }
+        "ec": 2.5,
+        "ph": 6.5
+    },
+    "ph_interval": 15
 }
 ```
 
@@ -83,7 +84,9 @@ The system uses a JSON configuration file ([`control_signal.json`](control_signa
 | `flush` | `int` | Duration (seconds) for final system flush |
 | `tanks` | `list[int]` | Duration (seconds) for each fertilizer tank |
 | `duty_cycle.ec` | `float` | Target EC (Electrical Conductivity) value |
-| `duty_cycle.ph` | `float` | Target pH level for fertigation solution |
+| `duty_cycle.ph` | `float` | Target pH level (6.0-7.0 optimal range) |
+| `ph_interval` | `int` | Seconds between pH readings (optional, default 30) |
+
 
 ## 🎮 Usage
 
@@ -192,9 +195,9 @@ Run pH monitoring and adjustment in parallel with tanks.
 
 ##### `handle_ph_reading(ph_value: float)`
 Process pH readings and manage acid/base tank operations:
-- pH > 7.0: Start acid tank
-- pH < 6.0: Start base tank  
-- 6.0 ≤ pH ≤ 7.0: Stop active tanks
+- pH > 7.0: Start acid tank to lower pH
+- pH < 6.0: Start base tank to raise pH
+- 6.0 ≤ pH ≤ 7.0: Optimal range, no adjustment needed
 
 ##### `generate_ph_reading() -> float`
 Simulate pH sensor reading (5.0 - 8.0 range).
