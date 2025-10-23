@@ -133,7 +133,7 @@ class FertigationController:
         )
         
         # File handler
-        file_handler = logging.FileHandler('fertigation_log_ctrl_c.txt', mode='w')
+        file_handler = logging.FileHandler('fertigation_log.txt', mode='w')
         file_handler.setFormatter(formatter)
         file_handler.setLevel(logging.INFO)
         
@@ -178,25 +178,7 @@ class FertigationController:
         This ensures proper cleanup and logging when the program is interrupted.
         Sets shutdown event to signal all threads to stop gracefully.
         """
-        # self.log_event("=== Fertigation Process Interrupted by User ===")
-        # self.log_event("Performing graceful shutdown...")
-        
-        # # Signal all threads to shutdown
-        # self.shutdown_event.set()
-        # self.fertigation_running_event.clear()
-        
-        # # Stop any running pH tanks (thread-safe)
-        # with self.lock:
-        #     if self.acid_tank_start_time is not None:
-        #         duration = (datetime.now() - self.acid_tank_start_time).total_seconds()
-        #         self.log_event(f"Acid pH Tank force stopped (was running for {int(duration)}s)")
-            
-        #     if self.base_tank_start_time is not None:
-        #         duration = (datetime.now() - self.base_tank_start_time).total_seconds()
-        #         self.log_event(f"Base pH Tank force stopped (was running for {int(duration)}s)")
-        
-        # self.log_event("Shutdown completed")
-        # sys.exit(0)
+
         self.log_event("=== Fertigation Process Interrupted by User ===")
         self.log_event("Performing graceful shutdown...")
         
@@ -544,8 +526,8 @@ class FertigationController:
             self.log_event("Starting concurrent operations: Tanks + Fertigation")
             
             # Create threads for tank operations and fertigation control
-            tank_thread = threading.Thread(target=self.run_tanks, name="TankThread", daemon=True)
-            fertigation_thread = threading.Thread(target=self.control_fertigation, name="FertigationThread", daemon=True)
+            tank_thread = threading.Thread(target=self.run_tanks, name="TankThread")
+            fertigation_thread = threading.Thread(target=self.control_fertigation, name="FertigationThread")
             
             # Start both threads
             tank_thread.start()
@@ -602,7 +584,7 @@ if __name__ == "__main__":
     4. Handle interrupts gracefully with proper thread cleanup
     """
     print("Fertigation Control System Starting...")
-    print("Logs will be written to 'fertigation_log_ctrl_c.txt'")
+    print("Logs will be written to 'fertigation_log.txt'")
     print("Press Ctrl+C to stop the process gracefully")
     print("-" * 50)
     
