@@ -238,7 +238,7 @@ class FertigationController:
             tank_number (int): Tank identifier (1, 2, 3, etc.)
             duration (int): How long the tank should run in seconds
             
-        This function represents the operation of one fertilizer/nutrient tank.
+        This function represents the operation of one fertilizer tank.
         Each tank runs in its own thread, allowing parallel operation.
         
         The function checks for shutdown signals periodically to enable graceful termination.
